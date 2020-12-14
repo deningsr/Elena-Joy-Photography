@@ -110,7 +110,6 @@ nav {
 
 .hero {
   min-width: 90vh;
-  width: 95%;
   margin: 0 0 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +123,7 @@ nav {
 
 .hero-introduction p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 
 .hero-introduction h2 {
@@ -156,6 +156,7 @@ nav {
   animation: plant-entrance 1.5s ease-in-out 0.5s forwards,
     plant-shake 2.5s infinite ease-in-out alternate-reverse 2s;
   transform-origin: bottom;
+  max-height: 80%;
 }
 
 .plant2 {
@@ -190,12 +191,56 @@ nav {
     transform: rotateZ(0);
   }
 }
-
+.burger,
 .burger.menu-check {
   display: none;
 }
 
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  background: var(--background-color);
+  color: white;
+}
+
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+.about-text h2 {
+  font-family: "Vibes";
+  padding: 4rem;
+}
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-image h5 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  letter-spacing: 2rem;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
   .burger {
     position: relative;
     display: block;
@@ -250,5 +295,10 @@ nav {
   }
   .menu-check:checked ~ .burger span :nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
+  }
+
+  /* About Section */
+  .about-text div {
+    padding: 3rem 3rem;
   }
 }
